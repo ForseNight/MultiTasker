@@ -1,0 +1,1011 @@
+<html>
+
+<head><title>Документация</title></head>
+
+<style>
+body {
+    margin: 0px;
+    overflow-y: hidden;
+}
+.a{
+    height: 100%; float: left;
+    background-color: #111;
+    overflow-y:scroll;
+}
+.b{
+    height: 100%; float: right;
+    background-color: #151515;
+    overflow-y:scroll;
+}
+.c{
+    background-color: #22222200;
+    color: #fff; cursor: pointer;
+    user-select: none;
+}
+.non{
+    list-style-type: none;
+}
+.hiden{
+    color: #ffffff00;
+}
+.hiden:hover{
+    color: #ffffff;
+}
+.c:hover{
+    background-color: #222;
+} .a::-webkit-scrollbar, .b::-webkit-scrollbar{width: 5px;} .a::-webkit-scrollbar-track, .b::-webkit-scrollbar-track {background: #00000000;} .a::-webkit-scrollbar-thumb, .b::-webkit-scrollbar-thumb {background-color: #888; border-radius: 5px;} .a::-webkit-scrollbar-thumb:hover, .b::-webkit-scrollbar-thumb:hover {background-color: #555;}
+</style>
+
+<body><div class="a"></div><div class="b"></div></body>
+
+<script class="Text formater">
+
+function textFormater(x,y){
+    if (x == "text"){
+        return `<center><div style="padding: 10px ;color:#ffffff; width: 90%; font-size: 15px;">${y}</div></center>`;
+    }
+    else if (x == "-text"){
+        return `<center><div style="text-align: left; padding: 10px ;color:#ffffff; width: 90%; font-size: 15px;">${y}</div></center>`;
+    }
+    else if (x == "title"){
+        return `<center><div style="padding-top: 10px; color:#ffffff; width: 90%; font-size: 30px;">${y}</div></center>`;
+    }
+    else if (x == "mini_title"){
+        return `<center><div style="padding-top: 15px; color:#ffffff; width: 90%; font-size: 20px;">${y}</div></center>`;
+    }
+    else if (x == "line"){
+        return `<center><div style="width: 90%; height: 1px; background-color: #ffffff95;"></div></center>`;
+    }
+    else if (x == "-line"){
+        return `<center><div style="width: 40%; height: 1px; background-color: #ffffff95;"></div></center>`;
+    }
+    else if (x == "code"){
+        return `<center><div style="white-space: pre; text-align: left; width: 90%; padding:10px; margin-top:10px; border-radius: 10px; background-color: #00000080; color:#fff;">${y}</div></center>`
+    }
+    else if (x == "+code"){
+        return `<center><div style="text-align: left; width: 90%; padding:10px; margin-top:10px; border-radius: 10px; background-color: #00000080; color:#fff;">${y}</div></center>`
+    }
+    else if (x == "html_text"){
+        return `<center><div style="text-align: left; padding: 10px ;color:#ffffff; width: 90%;">${y.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div></center>`;
+    }
+}
+
+</script>
+
+<script class="Concept data">
+
+sData = [
+//0
+[`Семейственная система get функций`,
+`
+${textFormater(`title`,`Семейство get функций`)}
+${textFormater(`text`,`хехы`)}
+${textFormater(`-line`,``)}
+${textFormater(`-text`,`Семейственная система get функций:<br>
+<ul>
+    <li>get - возращает данных.
+        <ul>
+            <li>Crt - создаёт пустую структуру данных.
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>Edt - редактирует структуру данных.</li>
+            <li>Chk - возращает данные о данных.</li>
+            <li>Frm - возращает данные из чего-то.
+                <ul>
+                    <li>Mem - возращает данные из памяти ПК.</li>
+                    <li>Dsk - возращает данные из винта ПК.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+`)}`],
+
+// 1
+[`Файловые системы и файлы`,
+`
+${textFormater(`mini_title`,`Файловые системы и файлы`)}
+${textFormater(`text`,`Файлы это куски данных сосредаточенные в некотором объекте отдельный от других кодов, которые в компьютере обычно преставляется в виде блока с иконкой. Файловая система, это уже папки в которых хранятся кучу файлов организованные под какую либо систему, обычно для соответствия требованиям к структурам данных или коректной работы программы.`)}
+`],
+
+// 2
+[`Стартер`,
+`
+${textFormater(`title`,`Стартер`)}
+${textFormater(`text`,`Это файл, которые взаймодействует с содержимым ядра мультитаскера, с целью извлечения пользователем той или иной выгоды от программного обеспечения.`)}
+`],
+
+// 3
+[`Ассистентный файл`,
+`
+${textFormater(`title`,`Ассистентный файл`)}
+${textFormater(`text`,`Это файл в название которой входит __init__ любого формата, предназначение которого заключается в упрощений для пользователя работы с мультизадачником чтоб упростить процесс создания своего файла стартера.`)}
+`],
+
+// 4
+[`Форматный порядок`,
+`
+${textFormater(`title`,`Форматный порядок`)}
+${textFormater(`text`,`Это порядок смысл которого заключается в упорядочиваний файлов в папки которые предназначенны для хранения файлов с конкректным форматом указывающийся после спецального символа которые может быть выбран пользователям.`)}
+`],
+
+// 5
+[`Лимитный порядок`,
+`
+${textFormater(`title`,`Лимитный порядок`)}
+${textFormater(`text`,`Это система упорядочивания файлов, смысл которого заключается в улигулеровке хранения количества файлов в указанной папке, распределением их в конкректных папках по одному из 2 принципов.`)}
+${textFormater(`-line`,``)}
+${textFormater(`mini_title`,`Принципы хранения файлов по лимитному порядку`)}
+${textFormater(`-text`,`● хранить в соответствий с названием: если в начале названия файла есть буква, то создается папка с начальной буквой этого файла, далее перемещаясь в него и так далее до поддерикторий созданной деректорий в соответствий с приведённым принципом.<br>● хранения в соответствий количества: указывается количество файлов которые допустимы для хранения в папке на данный момет, после чего указывается число папок которые можно создать чтоб хранить файлы. Тут нет смысла хранить по названию файла, главное переместить если лимит так говорит.`)}
+`],
+
+// 6
+[`Порядок файлов кода`,
+`
+${textFormater(`title`,`Порядок файлов кода`)}
+${textFormater(`-text`,`Порядок которые представляет из себя организованный порядок по созданию файлов кода:<br>● _goOff: файлы представляющие из себя код которые извлекает функционал программы на прямую в виде программы или т.п.<br>● act: файл кода, которые хранит в себе код по совершению действия в том окружений в котором он находится. Например ОС или какая-нибудь программы в которой запускается мультизадачник.<br>● get: функций которые возращают данные, в зависемости от того какой файл get вы решили использовате как и параметры которые вы ему передаете.<br>● func: файл кода, представляющий из себя файл с кодом функционалом которого могут пользоваться в get, act, func или _goOff<br>● var: хранит в себе переменные предназначенные для работы программ и заранее подготовленной системы переменных.`)}
+`],
+
+// 7
+[`Семейственная система act функций`,
+`
+${textFormater(`mini_title`,`Семейство get функций`)}
+${textFormater(`-text`,`Семейственная система act функций:<br>
+<ul>
+    <li>act - возращает данных.
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </li>
+</ul>
+`)}
+`],
+
+
+// 8
+[`Правило папочных веток`,
+`
+${textFormater(`title`,`Правило папочных веток`)}
+${textFormater(`text`,`Это правила, которые гласит о том, что если внутри папки нет файлов, но есть папки. Которые не как друг с другом не взаймодействуют, то эта папка представляет из себя ветку папок. Со своим предназначением.`)}
+`],
+
+// 9
+[`Правила написания кода, первая строка`,
+`
+${textFormater(`mini_title`,`Правила написания кода, первая строка`)}
+${textFormater(`text`,`Правила заключается в том чтоб в первой строке (если это возможно), писать метаданные о файле, в которых эти метаданные вписываются.`)}
+`],
+
+// 10
+[`Правила написания кода, именование функций`,
+`
+${textFormater(`mini_title`,`Правила написания кода, именование функций`)}
+${textFormater(`text`,`Это правило где говорится обязательное присутствие конкректных функций в файлах кода:<br>- func(): представляет из себя функцию с основным кодом файла.<br>- asyncFunc(): файл в котором написан тот же по смыслу код, только с асинхронностью.<br>- multiFunc(): файл в котором написан тот же по смыслу код, только с многопоточностью.`)}
+`],
+
+// 11
+[`Стандарт параметров`,
+`
+${textFormater(`mini_title`,`Стандарт параметров для get функций`)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`-text`,`Это система параметров для get код файлов:`)}
+${textFormater(`+code`,`
+{
+<ul class="non">
+    <li>"data":{<a class="hiden"> - тег данных, указывает данные или путь к данным.</a>
+        <ul class="non">
+            <li>"url":"",<a class="hiden"> - тег указывающий путь к файлу в пк.</a></li>
+            <li>"htp":"",<a class="hiden"> - тег указывающий путь к файлу ссылкой в интернете.</a></li>
+            <li>"txt":""<a class="hiden"> - тег указывающий данные, напрямую.</a></li>
+        </ul>
+    </li>},
+    <li>"":{</a>
+        <ul class="non">
+            <li>"to":"",<a class="hiden"> - .</a></li>
+            <li>"from":"",<a class="hiden"> - .</a></li>
+            <li>"in":"",<a class="hiden"> - .</a></li>
+            <li>"not":"",<a class="hiden"> - .</a></li>
+            <li>"":"",<a class="hiden"> - .</a></li>
+            <li>"":"",<a class="hiden"> - .</a></li>
+            <li>"":"",<a class="hiden"> - .</a></li>
+            <li>"":"",<a class="hiden"> - .</a></li>
+            <li>"":"",<a class="hiden"> - .</a></li>
+            <li>"":"",<a class="hiden"> - .</a></li>
+            <li>"":""<a class="hiden"> - .</a></li>
+        </ul>
+    </li>},
+    <li>"rtn":""<a class="hiden">- тег указывающий то какой тип данных, возращать.</a></li>
+</ul>
+}`)}
+`],
+
+// 12
+[`Види импортов в питоне`,
+`
+${textFormater(`title`,`Види импортов в питоне`)}
+${textFormater(`-text`,`
+<ul>
+    <li>Стандартный импорт</li>
+    <li>Импорт по содержимому</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+`)}
+`],
+
+// 13
+[`Стандартный импорт в питоне`,
+`
+${textFormater(`title`,`Стандартный импорт в питоне`)}
+${textFormater(`text`,`Такой импорт считается стандартным, но обладает кучей недостатков которые возможности импортов.`)}
+${textFormater(`-line`,``)}
+${textFormater(`code`,`import someModul`)}
+`],
+
+// 14
+[`Импорт по содержимому в питоне`,
+`
+${textFormater(`title`,`Импорт по содержимому в питоне`)}
+${textFormater(`text`,`Это способ импорта, в котором читается файл и читается функцией exec() сохроняя всё в словаре.`)}
+${textFormater(`-line`,``)}
+${textFormater(`code`,`with open(".lol\\..py", "r", encoding="utf-8") as file:
+    modul1 = file.read()
+with open(".lol\\!.py", "r", encoding="utf-8") as file:
+    modul2 = file.read()
+
+f1 = {}
+f2 = {}
+
+exec(modul1,f1)
+exec(modul2,f2)
+
+del modul1, modul2
+
+f1["func"]("xXx")
+f2["func"]()`)}
+`],
+
+//15
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//16
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//17
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//18
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//19
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//20
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`],
+
+//
+[``,
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`-line`,``)}
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+`]
+
+]
+
+</script>
+
+<script class="File data">
+
+var Data = [
+
+// 0
+["src/sys/",
+`
+${textFormater("title", `Папка`)}
+${textFormater("text", `Хранит в себе папочно файловые системы. Обычно хранит там программы, с которыми мультитаскер может так или иначе с ними работать или структуры данных которые могут иметь какую-либо ценность для программы.`)}
+${textFormater("line","")}
+${sData[1][1]}
+${textFormater("line","")}
+${sData[8][1]}
+`],
+
+// 1
+["core.pyw",
+`
+${textFormater(`title`,`Файл`)}
+${textFormater(`text`,`Обычный файл которые так или иначе может иметь отношение к мульттаскеру. Обычно такие файлы которые находятся за пределами ядра мультизадачника называют стартерами, в случай если они всё же так или иначе взаймодействуют с файловым содержимым ядра.`)}
+${textFormater(`line`,``)}
+${sData[2][1]}
+`],
+
+// 2
+["core.exe",
+`
+${textFormater(`title`,`Файл`)}
+${textFormater(`text`,`Обычный файл которые так или иначе может иметь отношение к мульттаскеру. Обычно такие файлы которые находятся за пределами ядра мультизадачника называют стартерами, в случай если они всё же так или иначе взаймодействуют с файловым содержимым ядра.`)}
+${textFormater(`line`,``)}
+${sData[2][1]}
+`],
+
+// 3
+["core.bat",
+`
+${textFormater(`title`,`Файл`)}
+${textFormater(`text`,`Обычный файл которые так или иначе может иметь отношение к мульттаскеру. Обычно такие файлы которые находятся за пределами ядра мультизадачника называют стартерами, в случай если они всё же так или иначе взаймодействуют с файловым содержимым ядра.`)}
+${textFormater(`line`,``)}
+${sData[2][1]}
+`],
+
+// 4
+["src/__init__.py",
+`
+${textFormater(`title`,`Файл`)}
+${textFormater(`text`,`Данный файл предназначен для упрощения создания файла стартера на языке программирования Python.`)}
+${textFormater(`line`,``)}
+${sData[3][1]}
+`],
+
+// 5
+["src/__init__.hpp",
+`
+${textFormater(`title`,`Файл`)}
+${textFormater(`text`,`Данный файл предназначен для упрощения создания файла стартера на языке программирования C++.`)}
+${textFormater(`line`,``)}
+${sData[3][1]}
+`],
+
+// 6
+["src/__init__.h",
+`
+${textFormater(`title`,`Файл`)}
+${textFormater(`text`,`Данный файл предназначен для упрощения создания файла стартера на языке программирования "C".`)}
+${textFormater(`line`,``)}
+${sData[3][1]}
+`],
+
+// 7
+["src/__init__.bat",
+`
+${textFormater(`title`,`Файл`)}
+${textFormater(`text`,`Данный файл предназначен для упрощения создания файла стартера на языке Batch Script.`)}
+${textFormater(`line`,``)}
+${sData[3][1]}
+`],
+
+// 8
+["src/file/",
+`
+${textFormater(`title`,`Папка`)}
+${textFormater(`text`,`Хранит файлы, которые являются самостоятельными файлами без зависемости от какого либо файловой системы.`)}
+${textFormater(`line`,``)}
+${sData[4][1]}
+`],
+
+// 9
+["src/file/_py/",
+`
+${textFormater(`title`,`Папка`)}
+${textFormater(`text`,`Является продуктом форматного порядка, призванный хранить файлы формата py.`)}
+${textFormater(`line`,``)}
+${sData[5][1]}
+${textFormater(`line`,``)}
+${sData[6][1]}
+${textFormater(`line`,``)}
+${sData[0][1]}
+${textFormater(`line`,``)}
+${sData[11][1]}
+`],
+
+// 10
+["src/",
+`
+${textFormater(`title`,`Папка`)}
+${textFormater(`text`,`Это папка представляет из себя ядро мультизадачника. Тут всё блогодоря чего он функционирует.`)}
+${textFormater(`line`,``)}
+`],
+
+// 11
+["src/sys/mcJava/",
+`
+${textFormater(`title`,`Папка`)}
+${textFormater(`text`,`Представляет из себя ветку которые хранит систему папок, которые представляют из себя игру майнкрафт написанные на языке java от разработчиков Mojang.`)}
+${textFormater(`line`,``)}
+`],
+
+// 12
+["src/file/_py/_goOff.py",
+`
+${textFormater(`title`,`Файл`)}
+${textFormater(`text`,`Просто файл запуска основной программы. Можно запустить без файла стартера.`)}
+`],
+
+// 13
+["src/file/_mtdat/",
+`
+${textFormater(`title`,`Папка`)}
+${textFormater(`text`,`Предназначена для хранения метаданных о файлах из src/file/ в файоах формата .mtdat`)}
+`],
+
+// 14
+["src/file/_py/_goOffMtdatSetAndSearch.py",
+`
+${textFormater(`title`,`Файл`)}
+${textFormater(`text`,`Программа смысл которого устанавливать теги для файлов и по ним их же и находить.`)}
+`],
+
+//
+["",
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`line`,``)}
+`],
+
+//
+["",
+`
+${textFormater(`title`,``)}
+${textFormater(`text`,``)}
+${textFormater(`line`,``)}
+`]
+
+]
+
+</script>
+
+<script class="src/sys/">
+
+mcJava = [
+    [`📂 1.20.1`,``,[]],
+    [`📂 1.16.5`,``,[]],
+    [`📂 1.12.2`,``,[]],
+    [`📂 1.7.10`,``,[]],
+    [`📂 1.5.2`,``,[]],
+    [`📂 1.2.5`,``,[]],
+    [`📂 1.0`,``,[]]
+]
+
+sys = [
+    [`📂 mcJava`,Data[11],mcJava],
+    [`📂 mcCpp`,``,[]],
+    [`📂 uTorrent`,``,[]],
+    [`📂 Terraria`,``,[]],
+    [`📂 minGw`,``,[]],
+    [`📂 LLVM`,``,[]],
+    [`📂 Git`,``,[]],
+    [`📂 Ch`,``,[]],
+    [`📂 Python`,``,[]],
+    [`📂 Mirror's Edge`,``,[]],
+    [`📂 Raft`,``,[]],
+    [`📂 Tor Browser`,``,[]],
+    [`📂 NTLite`,``,[]],
+    [`📂 `,``,[]],
+    [`📂 `,``,[]],
+    [`📂 `,``,[]],
+    [`📂 `,``,[]],
+    [`📂 `,``,[]],
+    [`📂 `,``,[]],
+    [`📂 `,``,[]],
+    [`📂 `,``,[]],
+    [`📂 `,``,[]],
+    [`📂 `,``,[]]
+]
+
+</script>
+
+<script class="src/file/_js/">
+
+_js = [
+    [`📄 _goOff.js`,``], //Основной запускатор.
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+    
+</script>
+
+<script class="src/file/_py/">
+
+var _py = [
+    [`📄 _goOff.py`,Data[12]],
+    [`📄 _goOff3dEditor.py`,``],
+    [`📄 _goOff3dModelNeuroGen.py`,``],
+    [`📄 _goOff3dModelRecognizer.py`,``],
+    [`📄 _goOff3dModelViewer.py`,``],
+    [`📄 _goOffAlphabetOrderer.py`,``],
+    [`📄 _goOffAnimeParser.py`,``],
+    [`📄 _goOffAssemblerEditor.py`,``],
+    [`📄 _goOffAudioViewer.py`,``],
+    [`📄 _goOffAviVideoEditor.py`,``],
+    [`📄 _goOffBatchScriptEditor.py`,``],
+    [`📄 _goOffCCodeEditor.py`,``],
+    [`📄 _goOffChemicalElViewer.py`,``],
+    [`📄 _goOffCmndForCmndBlockEditor.py`,``],
+    [`📄 _goOffCodeGenerator.py`,``],
+    [`📄 _goOffCompilerOfAll.py`,``],
+    [`📄 _goOffConsoleActer.py`,``],
+    [`📄 _goOffContainerGenerator.py`,``],
+    [`📄 _goOffCppCodeEditor.py`,``],
+    [`📄 _goOffCpuParser.py`,``],
+    [`📄 _goOffCshCodeEditor.py`,``],
+    [`📄 _goOffDataGenerator.py`,``],
+    [`📄 _goOffDjvuBookEditor.py`,``],
+    [`📄 _goOffDllFileEditor.py`,``],
+    [`📄 _goOffDsServersParser.py`,``],
+    [`📄 _goOffDupFileNameSearch.py`,``],
+    [`📄 _goOffEarth.py`,``],
+    [`📄 _goOffElectronBookViewer.py`,``],
+    [`📄 _goOffExeFileEditor.py`,``],
+    [`📄 _goOffFaceRecognizer.py`,``],
+    [`📄 _goOffFileManager.py`,``],
+    [`📄 _goOffFileSearch.py`,``],
+    [`📄 _goOfffProgCreate.py`,``],
+    [`📄 _goOffGameOfAll.py`,``],
+    [`📄 _goOffGameParser.py`,``],
+    [`📄 _goOffGameProjManager.py`,``],
+    [`📄 _goOffGifFileEditor.py`,``],
+    [`📄 _goOffGoalManager.py`,``],
+    [`📄 _goOffGpuParser.py`,``],
+    [`📄 _goOffGzFileEditor.py`,``],
+    [`📄 _goOffHmlEditor.py`,``],
+    [`📄 _goOffIcebergEditor.py`,``],
+    [`📄 _goOffIdeaEditor.py`,``],
+    [`📄 _goOffImageEditor.py`,``],
+    [`📄 _goOffImageGenerator.py`,``],
+    [`📄 _goOffImageNeuroGen.py`,``],
+    [`📄 _goOffImageViewer.py`,``],
+    [`📄 _goOffinternetbrowser.py`,``],
+    [`📄 _goOffInternetSearch.py`,``],
+    [`📄 _goOffIsoEditor.py`,``],
+    [`📄 _goOffJarFileEditor.py`,``],
+    [`📄 _goOffJavaCodeEditor.py`,``],
+    [`📄 _goOffJmacrosEditor.py`,``],
+    [`📄 _goOffJsCodeEditor.py`,``],
+    [`📄 _goOffLauncher.py`,``],
+    [`📄 _goOffLetterRecognizer.py`,``],
+    [`📄 _goOffListManager.py`,``],
+    [`📄 _goOffLittleTilesEditor.py`,``],
+    [`📄 _goOffLogicGame.py`,``],
+    [`📄 _goOffManagerOfAll.py`,``],
+    [`📄 _goOffMappetUiEditor.py`,``],
+    [`📄 _goOffMarsMap.py`,``],
+    [`📄 _goOffMcMapEditor.py`,``],
+    [`📄 _goOffMcModsManager.py`,``],
+    [`📄 _goOffMcRecipesEditor.py`,``],
+    [`📄 _goOffMcServerParser.py`,``],
+    [`📄 _goOffMcSettingEditor.py`,``],
+    [`📄 _goOffMoleculesViewer.py`,``],
+    [`📄 _goOffMoonMap.py`,``],
+    [`📄 _goOffMultitaskerFullReset.py`,``],
+    [`📄 _goOffMusicEditor.py`,``],
+    [`📄 _goOffNeuralNetCompiler.py`,``],
+    [`📄 _goOffNeuroProgEdt.py`,``],
+    [`📄 _goOffOfAllProgSettingEditor.py`,``],
+    [`📄 _goOffOralSpeechRecognizer.py`,``],
+    [`📄 _goOffOutlastEditor.py`,``],
+    [`📄 _goOffParserOfAll.py`,``],
+    [`📄 _goOffPasswordManager.py`,``],
+    [`📄 _goOffProgessionManager.py`,``],
+    [`📄 _goOffProgramEditor.py`,``],
+    [`📄 _goOffProgramParser.py`,``],
+    [`📄 _goOffPythonCodeEditor.py`,``],
+    [`📄 _goOffPythonManager.py`,``],
+    [`📄 _goOffRecognizerOfAll.py`,``],
+    [`📄 _goOffSearchFileTextFragmnt.py`,``],
+    [`📄 _goOffSearchOfAll.py`,``],
+    [`📄 _goOffSimulationNeuroGen.py`,``],
+    [`📄 _goOffStyleManager.py`,``],
+    [`📄 _goOffTextEditor.py`,``],
+    [`📄 _goOffTextFileEditor.py`,``],
+    [`📄 _goOffTextGenerator.py`,``],
+    [`📄 _goOffTextNeuroGen.py`,``],
+    [`📄 _goOffTextRecognizer.py`,``],
+    [`📄 _goOffTextViewer.py`,``],
+    [`📄 _goOffUniverseMap.py`,``],
+    [`📄 _goOffVideoEditor.py`,``],
+    [`📄 _goOffVideoGenerator.py`,``],
+    [`📄 _goOffVideoNeuroGen.py`,``],
+    [`📄 _goOffVideoViewer.py`,``],
+    [`📄 _goOffVirusNeuroRecognizer.py`,``],
+    [`📄 _goOffVirusRecognizer.py`,``],
+    [`📄 _goOffVoiceEditor.py`,``],
+    [`📄 _goOffVoiceGenerator.py`,``],
+    [`📄 _goOffVoxelEditor.py`,``],
+    [`📄 _goOffWebPageEditor.py`,``],
+    [`📄 _goOffWidgetSysGenerator.py`,``],
+    [`📄 _goOffWindowGenerator.py`,``],
+    [`📄 _goOffWordDataManager.py`,``],
+    [`📄 _goOffWordMeaningParser.py`,``],
+    [`📄 _goOffYtChanelParser.py`,``],
+    [`📄 _goOffYtCommentParser.py`,``],
+    [`📄 _goOffYtPlayListParser.py`,``],
+    [`📄 _goOffYtVideoParser.py`,``],
+    [`📄 _goOffYtVideoSearch.py`,``],
+    [`📄 _goOffYtVideoViewer.py`,``],
+    [`📄 _goOffZipFileEditor.py`,``],
+    [`📄 _goOffMtdatSetAndSearch.py`,Data[14]],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+
+
+
+</script>
+
+<script class="src/file/_java/">
+
+_java = [
+    [`📄 _goOff.java`,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+
+</script>
+
+<script class="src/file/_hpp/ & _cpp/">
+
+_cpp = [
+    [`📄 _goOff.cpp`,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+
+_hpp = [
+    [`📄 _goOff.hpp`,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+
+</script>
+
+<script class="src/file/_cs/">
+
+_cs = [
+    [`📄 _goOff.cs`,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+
+</script>
+
+<script class="src/file/_c/ & _h/">
+
+_c = [
+    [`📄 _goOff.c`,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+
+_h = [
+    [`📄 _goOff.h`,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+
+</script>
+
+<script class="src/file/_bat/">
+
+_bat = [
+    [`📄 _goOff.bat`,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+
+</script>
+
+<script class="src/file/_mtdat/">
+
+_mtdat = [
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``],
+    [`📄 `,``]
+]
+
+</script>
+
+<script class="src/file/">
+
+var file = [
+    [`📂 _py/`,Data[9],_py],
+    [`📂 _c/`,``,_c],
+    [`📂 _cs/`,``,_cs],
+    [`📂 _h/`,``,_h],
+    [`📂 _hpp/`,``,_hpp],
+    [`📂 _cpp/`,``,_cpp],
+    [`📂 _js/`,``,_js],
+    [`📂 _java/`,``,_java],
+    [`📂 _bat/`,``,_bat],
+    [`📂 _mtdat/`,Data[13],_mtdat]
+]
+
+</script>
+
+<script class="core tree">
+
+var tree = [
+    ['📂 src/', Data[10], [
+        ['📂 file/', Data[8],file],
+        [`📂 sys/`,Data[0],sys],
+        ['📄 __init__.py',Data[4]],
+        ['📄 __init__.hpp',Data[5]],
+        ['📄 __init__.h',Data[6]],
+        ['📄 __init__.bat',Data[7]]
+    ]],
+    ['📄 core.pyw',Data[1]],
+    ['📄 core.exe',Data[2]],
+    ['📄 core.bat',Data[3]]
+];
+
+</script>
+
+<script class="Core">
+
+var ch = prompt("1: это дерево файлов.\n2: концепций.")
+if(ch == "1"){
+    var a = [document.querySelector(".a"), document.querySelector(".b")]
+
+    function windowUpdate(){
+        a[0].style.width = "400px";
+        a[1].style.width = `${window.innerWidth-400}px`;
+        window.addEventListener('resize', function() {
+            a[1].style.width = `${window.innerWidth-400}px`;
+            a[0].style.width = "400px";
+        });
+    } windowUpdate();
+
+    for (var i = 0; i < tree.length; i++) {
+        a[0].innerHTML += `<div><div class="c" onclick="folderFileSys('c${i}', '${i}')">${tree[i][0]}</div><div class="c${i}"></div></div>`;
+    }
+
+    function folderFileSys(x, y) {
+        let nums = y.split('|').map(Number);
+        let elList = tree;
+        var inform = ''
+
+        for (var i = 0; i < nums.length; i++) {
+            if (i == nums.length-1){
+                inform = elList[nums[i]][1][1];
+            } if (Array.isArray(elList[nums[i]][2])) {
+                elList = elList[nums[i]][2];
+            } else {
+                elList = [];
+            }
+        }
+
+        a[1].innerHTML = inform;
+
+        document.querySelector(`.${x}`).innerHTML = '';
+
+        let spacex = "";
+        for (var i = 0; i < nums.length; i++) {
+            if (nums.length - 1 == i) {
+                spacex += "└─ ";
+            } else {
+                spacex += "<div style='display: inline-block; width: 15px;'></div>";
+            }
+        }
+
+        for (var i = 0; i < elList.length; i++) {
+            document.querySelector(`.${x}`).innerHTML += `<div><div class="c" onclick="folderFileSys('${x}${i}', '${y}|${i}')">${spacex}${elList[i][0]}</div><div class="${x}${i}"></div></div>`;
+        }
+    }
+}
+else if(ch == "2"){
+    var a = [document.querySelector(".a"), document.querySelector(".b")]
+
+    function windowUpdate(){
+        a[0].style.width = "400px";
+        a[1].style.width = `${window.innerWidth-400}px`;
+        window.addEventListener('resize', function() {
+            a[1].style.width = `${window.innerWidth-400}px`;
+            a[0].style.width = "400px";
+        });
+    } windowUpdate();
+    for(var i = 0; i < sData.length; i++){
+        a[0].innerHTML += `<div class="c" onclick="folderFileSys(${i})">${sData[i][0]}</div>`;
+    }
+    function folderFileSys(x){
+        a[1].innerHTML = sData[x][1];
+    }
+}
+
+</script>
+
+</html>
